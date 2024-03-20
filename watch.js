@@ -54,9 +54,6 @@ document.addEventListener('DOMContentLoaded', function(){
         // HANDLE TIMER
         // if TIMER START button is clicked
         if (event.target === timerStart){
-            console.log("timerStart button pushed");
-            console.log("timerComplete boolean: " + timerComplete);
-            console.log("countTimerBool : " + countTimerBool);
             countTimerBool = true; // set countTimerBool to true to start calling function to update timer
         }
 
@@ -168,7 +165,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // function to handle timer reset click
     function countTimer(){
-        console.log("countTimer function called")
         // Get current timer time
         const getCurrentTime = timer.textContent;
         
@@ -266,7 +262,6 @@ document.addEventListener('DOMContentLoaded', function(){
         // Stop the muted attribute to allow the alarm sound
         alarmSound.muted = false;
         alarmSound.play(); // play the alarm sound
-        console.log("Unmuted");
     }
 
     // function to stop alarm
@@ -277,7 +272,6 @@ document.addEventListener('DOMContentLoaded', function(){
         countTimerBool = false; // reset countTimerBool alarm new timer to start
         timerIntervalId = null; // set interval ID to null to allow restart of timer
         stopAlarmBtn.style.display = "none"; // rehide Stop Alarm Button
-        console.log("Muted");
     }
 
     // function to count stop watch
