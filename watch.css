@@ -1,0 +1,60 @@
+
+body {
+    text-align: center;
+    display: flex; /* flexbox to make footer appear at bottom of page */
+    flex-direction: column;
+    min-height: 100vh; /* Set the minimum height of the wrapper to 100% of the viewport height */
+    margin: 0;
+}
+
+/* used to put footer at bottom of the page */
+.page-wrapper {
+    text-align: center;
+    flex: 1; /* Allow the wrapper to grow and take up remaining space */
+}
+
+.app-header{
+    margin: 20px;
+    font-family: "Courier New", monospace; /* Use a monospaced font */
+}
+
+.wrapper {
+    text-align: center;
+}
+
+/* styling for digital clock, timer and stopwatch divs */
+.main-clock {
+    font-size: 80px;
+    width: 60%;
+    margin: 50px auto; /* Center the element horizontally using auto margins, auto prevents shifting to the left */
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: inline-block;  /* Make divs behave like inline elements, prevents from shifting while changing */
+    font-family: "Courier New", monospace; /* Use a monospaced font */
+}
+
+#timer {
+    cursor: pointer;
+}
+
+#timer-input {
+    color: gray;
+}
+
+#stop-alarm{
+    background-color: red;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        width: 100%;
+        height: 100%; /* Set the minimum height of the wrapper to 100% of the viewport height */
+        margin: 0; /* Remove any default margins */
+    }
+
+    .main-clock{
+        font-size: 50px;
+        width: 95%;
+    }
+}
